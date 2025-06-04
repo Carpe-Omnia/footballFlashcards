@@ -107,7 +107,7 @@
 
         img {
             max-width: 100%;
-            max-height: 80%;
+            max-height: 70%;
             border-radius: 5px;
         }
 
@@ -147,6 +147,7 @@
         <div class="tab" onclick="showCategory('routes')">Routes</div>
         <div class="tab" onclick="showCategory('concepts')">Concepts</div>
         <div class="tab" onclick="showCategory('penalties')">Penalties</div>
+        <div class="tab" onclick="showCategory('positions')">Positions</div>
     </div>
     <div id="basics" class="flashcards-container active">
         <div class="flashcard" onclick="flipCard(this)">
@@ -183,6 +184,17 @@
                 <div class="flashcard-back">
                     <p>a slant route is a short, quick route where a receiver runs a few steps forward, then cuts sharply across the middle of the field at a 45-degree angle</p>
                     <img src="images/slant-route.jpg" alt="Diagram of a slant route" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is a drag route?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>similar to a slant route, a drag route is when a receiver takes a few steps downfield and then breaks towards the middle. It has a more "flat" trajectory from sideline to sideline than the angled route taken on a slant.</p>
+                    <img src="images/drag-route.jpg" alt="Diagram of a slant route" style="display: block; margin: 10px auto;">
                 </div>
             </div>
         </div>
@@ -279,10 +291,11 @@
         <div class="flashcard" onclick="flipCard(this)">
             <div class="flashcard-inner">
                 <div class="flashcard-front">
-                    <p>What is the offside rule?</p>
+                    <p>What is dagger concept?</p>
                 </div>
                 <div class="flashcard-back">
-                    <p>A player is offside if they are nearer to the opponent's goal than both the ball and the second-last opponent.</p>
+                    <p>a 3-man combo: a vertical route from the slot WR, a drag from the weak side, and a deep dig or square-in from the primary target</p>
+                    <img src="images/dagger-pic.webp" alt="Diagram of a dagger concept" style="display: block; margin: 10px auto;">
                 </div>
             </div>
         </div>
@@ -300,7 +313,19 @@
             </div>
         </div>
     </div>
-
+    <div id="positions" class="flashcards-container">
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>Who is a center?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p> Designated below with a "C", the center plays in the middle of the offensive line. They snap the ball to the quarterback to initiate the play. Typically standing between 6'2 and 6'4 and weighing between 280-340 lbs, centers tend to be quite large. They are also prized for their toughness, as continuity is very important in this position given their important interactions with the quarterback.</p>
+                    <img src="images/center.jpg" alt="Diagram of a formation with center" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         function flipCard(card) {
             const inner = card.querySelector('.flashcard-inner');
