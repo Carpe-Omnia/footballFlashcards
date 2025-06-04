@@ -174,6 +174,19 @@
                 </div>
             </div>
         </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>Which player has the most super bowl wins in their career</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Tom Brady won 7 super bowl rings during his 23 seasons in the NFL</p>
+                    <p>He won 6 super bowls with the New England Patriots and 1 more with the Tampa Bay Buccaneers</p>
+                    <img src="images/brady-rings.jpg" alt="Tom Brady poses with his 7 super bowl rings." style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+        <!--End Basics Flashcards-->
     </div>
     <div id="routes" class="flashcards-container">
         <div class="flashcard" onclick="flipCard(this)">
@@ -287,6 +300,7 @@
             </div>
         </div>
     </div>
+    <!--End Routes Flashcards-->
     <div id="concepts" class="flashcards-container">
         <div class="flashcard" onclick="flipCard(this)">
             <div class="flashcard-inner">
@@ -299,7 +313,52 @@
                 </div>
             </div>
         </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is drive concept?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>High low concept with a deep dig from the inside receiver and a shallow cross from the outside reciever</p>
+                    <img src="images/drive-concept.jpg" alt="Diagram of a drive concept" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is four verticals?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Passing concept where four receivers all go deep. Typically used in low time, high yardage situations where a big completion is neccesary.</p>
+                    <img src="images/four-verticals.jpg" alt="Diagram of a dagger concept" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is mesh concept?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Simple crossing pattern two wide receivers crossing underneath at a mesh point. Usually tight end and slot receiver. If cover 2 change outside receiver to a post. Good against man and cover 4</p>
+                    <img src="images/mesh-concept.jpg" alt="Diagram of a mesh concept" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is mills concept?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>The outside receiver runs a deep post and the inside runs a dig route. Great way to attack cover 4. Works against cover 1 and 3.</p>
+                    <img src="images/mills-concept.webp" alt="Diagram of a mesh concept" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
     </div>
+    <!--End Concepts Flashcards-->
     <div id="penalties" class="flashcards-container">
         <div class="flashcard" onclick="flipCard(this)">
             <div class="flashcard-inner">
@@ -313,6 +372,7 @@
             </div>
         </div>
     </div>
+    <!--End Penalties Flashcards-->
     <div id="positions" class="flashcards-container">
         <div class="flashcard" onclick="flipCard(this)">
             <div class="flashcard-inner">
@@ -326,6 +386,7 @@
             </div>
         </div>
     </div>
+    <!--End Positions Flashcards-->
     <script>
         function flipCard(card) {
             const inner = card.querySelector('.flashcard-inner');
