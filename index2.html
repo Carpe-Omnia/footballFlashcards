@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Flashcards</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Responsive Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Football Flashcards</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" onclick="showCategory('basics')">Basics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="showCategory('routes')">Routes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="showCategory('concepts')">Concepts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="showCategory('penalties')">Penalties</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="showCategory('positions')">Positions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="basics" class="flashcards-container active">
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <div>
+                        <p>What is the max number of players per team on the field at any given time?</p>
+                    </div>
+                </div>
+                <div class="flashcard-back">
+                    <p>Eleven</p>
+                    <p>If a team has more than this they draw a "too many men on the field" penalty worth 5 yards</p>
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>Which team won the super bowl in the 2024-2025 season?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>The Philadelphia Eagles</p>
+                    <img src="images/eagleswin.jpg" alt="Handsome Jalen Hurts holding the Lombardi trophy" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>Which player has the most super bowl wins in their career</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Tom Brady won 7 super bowl rings during his 23 seasons in the NFL</p>
+                    <p>He won 6 super bowls with the New England Patriots and 1 more with the Tampa Bay Buccaneers</p>
+                    <img src="images/brady-rings.jpg" alt="Tom Brady poses with his 7 super bowl rings." style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+        <!--End Basics Flashcards-->
+    </div>
+    <div id="routes" class="flashcards-container">
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is a slant route?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>a slant route is a short, quick route where a receiver runs a few steps forward, then cuts sharply across the middle of the field at a 45-degree angle</p>
+                    <img src="images/slant-route.jpg" alt="Diagram of a slant route" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is a drag route?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>similar to a slant route, a drag route is when a receiver takes a few steps downfield and then breaks towards the middle. It has a more "flat" trajectory from sideline to sideline than the angled route taken on a slant.</p>
+                    <img src="images/drag-route.jpg" alt="Diagram of a slant route" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is a flat route?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>a basic, short route where a receiver, often a running back, tight end, or slot receiver, runs a few steps forward before quickly breaking outside towards the sideline. This route is typically used to create an early, short passing option or to draw defenders towards the sideline, creating space for other routes. </p>
+                    <img src="images/flat-route.jpg" alt="Diagram of a slant route" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is a comeback route?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>a comeback route is a route where a receiver sprints downfield before turning back towards the sideline. It is typically only run by an outside receiver because in conjucnction with a back-shoudler throw it becomes very difficult for the defender to reach. </p>
+                    <img src="images/comeback-route.jpg" alt="Diagram of a comeback route" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is a curl route?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p> Also called a stop route, a curl route is when a receiver the receiver sprints directly downfield, then stop and curl back to the inside of the field, away from the closest sideline. Often used in conjunction with a comeback route</p>
+                    <img src="images/curl-route.jpg" alt="Diagram of a curl route" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is an out route?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p> An out route is similar to a flat route but run at much greater depth. The receiver runs 10-15 yards downfield and then breaks towards the sideline. Typically receivers catch this ball very clsoe to the sideline.</p>
+                    <img src="images/out-route.jpg" alt="Diagram of an out route" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is an in/dig route?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p> An in/dig route is a route where the receiver runs 10-15 yards straight downfield and then breaks towards the center of the field. </p>
+                    <img src="images/dig-route.jpg" alt="Diagram of an out route" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is a corner route?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p> A corner route is a route where the receiver runs 10-15 yards straight downfield and then breaks outwards towards the deep outside corner of the field. This route can alleviate pressure from the middle of the field by drawing defenders towards the corner. </p>
+                    <img src="images/corner-route.jpg" alt="Diagram of an out route" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is a post route?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p> A post route is when the receiver runs 10-15 yards downfield and then breaks in towards the middle of the field.  </p>
+                    <img src="images/post-route.jpg" alt="Diagram of a post route" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is a go/fly route?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p> A go/fly route is when a receiver runs as fast and as straight as they can downfield. The goal is to trick a defender into thinking that they will break and create seperation with speed. </p>
+                    <img src="images/go-route.jpg" alt="Diagram of a go/fly route" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Routes Flashcards-->
+    <div id="concepts" class="flashcards-container">
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is dagger concept?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>a 3-man combo: a vertical route from the slot WR, a drag from the weak side, and a deep dig or square-in from the primary target</p>
+                    <img src="images/dagger-pic.webp" alt="Diagram of a dagger concept" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is drive concept?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>High low concept with a deep dig from the inside receiver and a shallow cross from the outside reciever</p>
+                    <img src="images/drive-concept.jpg" alt="Diagram of a drive concept" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is four verticals?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Passing concept where four receivers all go deep. Typically used in low time, high yardage situations where a big completion is neccesary.</p>
+                    <img src="images/four-verticals.jpg" alt="Diagram of a dagger concept" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is mesh concept?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Simple crossing pattern two wide receivers crossing underneath at a mesh point. Usually tight end and slot receiver. If cover 2 change outside receiver to a post. Good against man and cover 4</p>
+                    <img src="images/mesh-concept.jpg" alt="Diagram of a mesh concept" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is mills concept?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>The outside receiver runs a deep post and the inside runs a dig route. Great way to attack cover 4. Works against cover 1 and 3.</p>
+                    <img src="images/mills-concept.webp" alt="Diagram of a mesh concept" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Concepts Flashcards-->
+    <div id="penalties" class="flashcards-container">
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is Defensive Pass Interference (DPI)?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>When a defensive player significantly hinders an eligible offensive player's ability to catch a pass. Results in a spot foul and automatic first down.</p>
+                    <p>In college football the maximum yardage gained from a DPI is 15 yards</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Penalties Flashcards-->
+    <div id="positions" class="flashcards-container">
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>Who is a center?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p> Designated below with a "C", the center plays in the middle of the offensive line. They snap the ball to the quarterback to initiate the play. Typically standing between 6'2 and 6'4 and weighing between 280-340 lbs, centers tend to be quite large. They are also prized for their toughness, as continuity is very important in this position given their important interactions with the quarterback.</p>
+                    <img src="images/center.jpg" alt="Diagram of a formation with center" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        margin-top: 20px;
+        color: #333;
+    }
+
+    .tabs {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .tab {
+        padding: 10px 20px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 0 5px;
+        background-color: #fff;
+        color: #004d40; /* Dark green text for unselected tabs */
+    }
+
+    .tab.active {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .flashcards-container {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
+
+    .flashcards-container.active {
+        display: flex;
+    }
+    .flashcard-back {
+        flex-direction: column;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .flashcard-back img {
+        margin-top: 10px;
+        object-fit: contain;
+        width: 90%;
+        height: auto;
+    }
+    .flashcard {
+        width: 90%;
+        max-width: 600px;
+        height: 400px;
+        margin: 20px 0;
+        perspective: 1000px;
+    }
+
+    .flashcard-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+    }
+
+    .flashcard-inner.flipped {
+        transform: rotateY(180deg);
+    }
+
+    .flashcard-front, .flashcard-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+    }
+
+    .flashcard-front {
+        color: #333;
+    }
+
+    .flashcard-back {
+        transform: rotateY(180deg);
+        background-color: #333;
+        color: #fff;
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 70%;
+        border-radius: 5px;
+    }
+
+    p {
+        margin: 10px;
+    }
+    body {
+        background-color: #004953; /* Midnight green */
+        color: #f4f4f4; /* Light text for better contrast */
+    }
+
+    .tab {
+        border-color: #00796b; /* Darker green for tabs */
+    }
+
+    .tab.active {
+        background-color: #00796b; /* Highlighted tab color */
+    }
+
+    .flashcard-front {
+        background-color: #e0f2f1; /* Light green for front */
+    }
+
+    .flashcard-back {
+        background-color: #004d40; /* Dark green for back */
+    }
+
+    h1 {
+        color: #e0f2f1; /* Light green for header */
+    }
+    .navbar-nav .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.2);
+        font-weight: bold;
+    }
+</style>
+<script>
+    function flipCard(card) {
+        const inner = card.querySelector('.flashcard-inner');
+        inner.classList.toggle('flipped');
+    }
+
+    function showCategory(category) {
+    // Hide all flashcard containers
+    const containers = document.querySelectorAll('.flashcards-container');
+    containers.forEach(container => {
+        container.classList.remove('active');
+        if (container.id === category) {
+            container.classList.add('active');
+        }
+    });
+
+    // Update active state for navbar items
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('onclick').includes(category)) {
+            link.classList.add('active');
+        }
+    });
+    }
+
+        containers.forEach(container => {
+            container.classList.remove('active');
+            if (container.id === category) {
+                container.classList.add('active');
+            }
+        });
+</script>
+</html>
