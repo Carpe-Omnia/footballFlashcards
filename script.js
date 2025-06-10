@@ -12,6 +12,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function flipCard(card) {
     const inner = card.querySelector('.flashcard-inner');
+    const front = card.querySelector('.flashcard-front');
+    const back = card.querySelector('.flashcard-back');
+    
+    // Measure both sides before flipping
+    const frontHeight = front.scrollHeight;
+    const backHeight = back.scrollHeight;
+    const maxHeight = Math.max(frontHeight, backHeight);
+    
+    // Set the height to accommodate the taller side
+    inner.style.minHeight = `${maxHeight}px`;
+
+
     inner.classList.toggle('flipped');
 }
 
