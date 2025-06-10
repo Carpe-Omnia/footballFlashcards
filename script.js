@@ -33,7 +33,7 @@ navLinks.forEach(link => {
         link.classList.add('active');
     }
 });
-}
+
 
     containers.forEach(container => {
         container.classList.remove('active');
@@ -41,4 +41,4 @@ navLinks.forEach(link => {
             container.classList.add('active');
         }
     });
-
+}
