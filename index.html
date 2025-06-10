@@ -4,151 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Football Flashcards</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1 {
-            margin-top: 20px;
-            color: #333;
-        }
-
-        .tabs {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
-
-        .tab {
-            padding: 10px 20px;
-            cursor: pointer;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin: 0 5px;
-            background-color: #fff;
-            color: #004d40; /* Dark green text for unselected tabs */
-        }
-
-        .tab.active {
-            background-color: #333;
-            color: #fff;
-        }
-
-        .flashcards-container {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px;
-        }
-
-        .flashcards-container.active {
-            display: flex;
-        }
-        .flashcard-back {
-            flex-direction: column;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .flashcard-back img {
-            margin-top: 10px;
-            object-fit: contain;
-            width: 90%;
-            height: auto;
-        }
-        .flashcard {
-            width: 90%;
-            max-width: 600px;
-            height: 400px;
-            margin: 20px 0;
-            perspective: 1000px;
-        }
-
-        .flashcard-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            transform-style: preserve-3d;
-            transition: transform 0.6s;
-        }
-
-        .flashcard-inner.flipped {
-            transform: rotateY(180deg);
-        }
-
-        .flashcard-front, .flashcard-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #fff;
-        }
-
-        .flashcard-front {
-            color: #333;
-        }
-
-        .flashcard-back {
-            transform: rotateY(180deg);
-            background-color: #333;
-            color: #fff;
-        }
-
-        img {
-            max-width: 100%;
-            max-height: 70%;
-            border-radius: 5px;
-        }
-
-        p {
-            margin: 10px;
-        }
-        body {
-            background-color: #004953; /* Midnight green */
-            color: #f4f4f4; /* Light text for better contrast */
-        }
-
-        .tab {
-            border-color: #00796b; /* Darker green for tabs */
-        }
-
-        .tab.active {
-            background-color: #00796b; /* Highlighted tab color */
-        }
-
-        .flashcard-front {
-            background-color: #e0f2f1; /* Light green for front */
-        }
-
-        .flashcard-back {
-            background-color: #004d40; /* Dark green for back */
-        }
-
-        h1 {
-            color: #e0f2f1; /* Light green for header */
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Football Flashcards</h1>
-    <div class="tabs">
-        <div class="tab active" onclick="showCategory('basics')">Basics</div>
-        <div class="tab" onclick="showCategory('routes')">Routes</div>
-        <div class="tab" onclick="showCategory('concepts')">Concepts</div>
-        <div class="tab" onclick="showCategory('penalties')">Penalties</div>
-        <div class="tab" onclick="showCategory('positions')">Positions</div>
-    </div>
+    <!-- Responsive Navbar -->
+    <div id="navbar-container"></div>
     <div id="basics" class="flashcards-container active">
         <div class="flashcard" onclick="flipCard(this)">
             <div class="flashcard-inner">
@@ -183,6 +46,30 @@
                     <p>Tom Brady won 7 super bowl rings during his 23 seasons in the NFL</p>
                     <p>He won 6 super bowls with the New England Patriots and 1 more with the Tampa Bay Buccaneers</p>
                     <img src="images/brady-rings.jpg" alt="Tom Brady poses with his 7 super bowl rings." style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>How many yards does a team need to gain to receive a first down?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>The offense must gain 10 yards in order to receive a first down</p>
+                    <p>The line which they must cross, often called the "line to gain", is typically marked on television broadcasts with a yellow line</p>
+                    <img src="images/first-down.jpg" alt="Diagram of a first down" style="display: block; margin: 10px auto;"> 
+                </div>
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What plays might a team on offense run on 4th down that they otherwise wouldn't?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>If a team is backed into their own territory, they typically will punt on 4th down. IE intentionally giving up control of the ball by kicking it down the field. If a team is reasonably close to the opponent's endzone, they might attempt a field goal. Kicking the ball between the other team's uprights to score 3 points.</p>
+                    <img src="images/field-goal.gif" alt="gif of a field goal" style="display: block; margin: 10px auto;"> 
                 </div>
             </div>
         </div>
@@ -371,8 +258,81 @@
                 </div>
             </div>
         </div>
-    </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is a facemask penalty?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>When a player intentionally grasps the facemask of an opponent's helmet, typically to pull push or twist. The punishment is a 15 yard penalty. This is strictly enforced as grabbing the facemask can be extremely dangerous.</p>
+                    <img src="images/facemask.jpg" alt="A player grabs the facemask of an opponent" style="display: block; margin: 10px auto;"> 
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is a holding penalty?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>When a player illegally grabs an opponent or their jersey to impede their movement. This is most commonly called on offensive linemen, but can be called on any player. The punishment is a 10 yard penalty.</p>
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is a false start?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>When an offensive player moves before the snap, typically the center or a wide receiver. The punishment is a 5 yard penalty.</p>
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is a personal foul?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>When a player commits an act of unnecessary roughness, such as hitting a defenseless player or using excessive force. The punishment is a 15 yard penalty.</p>
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is a delay of game?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>When the offense fails to snap the ball before the play clock expires. The punishment is a 5 yard penalty.</p>
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is a roughing the passer?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>When a defensive player makes illegal contact with the quarterback after they have thrown the ball. The punishment is a 15 yard penalty and an automatic first down.</p>
+                    <img src="images/roughing-the-passer.webp" alt="Milton Williams humiliates Patrick Mahomes in super bowl LIX" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>What is taunting?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>The NFL considers taunting to be any unsportsmanlike conduct directed at an opponent or their bench. This can include things like standing over opponents, moving toward their bench, or making gestures that are considered disrespectful or taunting in nature. </p>
+                    <img src="images/taunting.gif" alt="A player taunts an opponent after a touchdown" style="display: block; margin: 10px auto;">
+                </div>
+            </div>
+        </div>
     <!--End Penalties Flashcards-->
+    </div>
     <div id="positions" class="flashcards-container">
         <div class="flashcard" onclick="flipCard(this)">
             <div class="flashcard-inner">
@@ -380,37 +340,88 @@
                     <p>Who is a center?</p>
                 </div>
                 <div class="flashcard-back">
-                    <p> Designated below with a "C", the center plays in the middle of the offensive line. They snap the ball to the quarterback to initiate the play. Typically standing between 6'2 and 6'4 and weighing between 280-340 lbs, centers tend to be quite large. They are also prized for their toughness, as continuity is very important in this position given their important interactions with the quarterback.</p>
+                    <p> Designated below with a "C", the center plays in the middle of the offensive line. They snap the ball to the quarterback to initiate the play. Typically standing between 6'2 and 6'4 and weighing between 280-340 lbs, centers tend to be quite large. They are also prized for their toughness.</p>
                     <img src="images/center.jpg" alt="Diagram of a formation with center" style="display: block; margin: 10px auto;">
                 </div>
             </div>
         </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>Who is a quarterback?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p> Often considered the most important position on the team, a quarterback (QB) stands behind the center and receives the snap to initiate the play. Once the play has begun a quarterback typically hands it off to another player, passes it, or attempts to run with it themselves. </p>
+                    <p> The QB is typically the only player in direct communication with the coach while the offense is on the field. It is his responsibility to relay instructions to the rest of the team. </p>
+                    <p> The most important attributes for a QB are throwing ability and intelligence. </p>
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>Who is a wide receiver?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>A wide receiver, or WR, lines up closer to the sideline. Their role is primarily to catch passes downfield and gain yardage. A secondary function is to block on running plays</p>
+                    <p>Wide receivers are typically around 6ft tall and 200 lbs. Their most important attributes are speed and catching ability.</p>
+                    <p>Top wide receivers at the pro level sometimes have a reputation for dramatic behavior. This stems from their desire to be targeted more by the quarterback for passes. </p>                    
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>Who is a running back?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>A running back, or RB, lines up behind the quarterback and is responsible for running with the ball. They are also often used as a short passing option.</p>
+                    <p>Running backs are typically around 5'10 and 220 lbs. Their most important attributes are speed and agility. </p>
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>Who is a tight end?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>A tight end, or TE, lines up next to the offensive line and can be used as a blocker or receiver. They are typically larger than wide receivers but smaller than offensive linemen.</p>
+                    <p>Tight ends are typically around 6'4 and 250 lbs. Their most important attributes are catching ability and blocking ability.</p>
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>Who is a tackle</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>A tackle plays on the edge of the offensive line. Their responsibility is to anchor the offensive line and block for the QB or RB</p>
+                    <p>Since most quarterbacks are right handed, the left tackle is considered the premium position on the offensive line as they protect the QB's blindside</p>
+                    <p>Tackles are typically around 6'5 and 300 lbs. Their most important attributes are strength and deceptive agility.</p>
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <p>Who is a guard?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>A guard plays on the inside of the offensive line. Their responsibility is to strengthen the offensive line and block for the QB or RB</p>
+                    <p>Guards are typically around 6'3 and 300 lbs. Their most important attributes are strength and agility.</p>
+                    <img src="images/guard.jpg" alt="4x super bowl champ Joe Thuney gets ready for a play" style="display: block; margin: 10px auto;">
+
+                </div>
+            </div>
+        </div>
+    <!-- end positions Flashcards-->    
     </div>
-    <!--End Positions Flashcards-->
-    <script>
-        function flipCard(card) {
-            const inner = card.querySelector('.flashcard-inner');
-            inner.classList.toggle('flipped');
-        }
 
-        function showCategory(category) {
-            const tabs = document.querySelectorAll('.tab');
-            const containers = document.querySelectorAll('.flashcards-container');
-
-            tabs.forEach(tab => {
-                tab.classList.remove('active');
-                if (tab.textContent.toLowerCase() === category) {
-                    tab.classList.add('active');
-                }
-            });
-
-            containers.forEach(container => {
-                container.classList.remove('active');
-                if (container.id === category) {
-                    container.classList.add('active');
-                }
-            });
-        }
-    </script>
+    
+    
 </body>
+
+
 </html>
