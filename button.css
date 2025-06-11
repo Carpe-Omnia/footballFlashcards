@@ -1,0 +1,54 @@
+.navbar-toggler {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border: none;
+    padding: 0;
+    z-index: 10;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    display: none;
+}
+
+.toggler-icon {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 24px;
+    background: white;
+    border-radius: 1px;
+    left: 8px;
+    transition: all 0.3s ease;
+}
+
+.top-bar {
+    top: 12px;
+}
+
+.middle-bar {
+    top: 19px;
+}
+
+.bottom-bar {
+    top: 26px;
+}
+
+/* When navbar is open (not collapsed) */
+.navbar-toggler:not(.collapsed) .top-bar {
+    transform: rotate(45deg);
+    top: 19px;
+}
+
+.navbar-toggler:not(.collapsed) .middle-bar {
+    opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) .bottom-bar {
+    transform: rotate(-45deg);
+    top: 19px;
+}
